@@ -3,17 +3,11 @@ const Backend_Url = 'http://localhost:4000'              //process.env.REACT_APP
 
 // Create Axios instance
 const axiosInstance = axios.create({
-  baseURL: `${Backend_Url}/api/`,
+  baseURL: `${Backend_Url}/`,
 });
 
 
 //
-export const aApi = async () => {
-    return axiosInstance.get('/aa');
+export const callApi = async (payload) => {
+    return axiosInstance.post('/ask-ai', payload);
 }
-
-//
-export const aaApi = async (payload) => {
-    return axiosInstance.post('/aaa', payload);
-}
-
