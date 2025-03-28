@@ -42,6 +42,9 @@ async function askAI(message) {
 }
 
 // Route to handle AI requests
+
+
+
 app.get("/", (req, res) => {
     res.send("Hello World!");
 });
