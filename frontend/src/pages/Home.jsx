@@ -22,7 +22,7 @@ const Home = () => {
         <h1 className="text-5xl font-bold mb-6">Delicious Recipes at Your Fingertips!</h1>
         <h2 className="text-xl mb-6">Find the perfect dish with a single click and elevate your cooking experience.</h2>
         <Link to="/suggest"> 
-        <button className="bg-[#fa4918f7]  text-white px-6 py-2 rounded-lg shadow-md">
+        <button className="bg-[#f76d4ef7] text-white px-6 py-2 rounded-lg shadow-md">
           Suggest
         </button>
         </Link>

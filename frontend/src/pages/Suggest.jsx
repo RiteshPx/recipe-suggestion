@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../shared/Navbar';
 
 const Suggest = () => {
     const [msg, setMsg] = useState('');
@@ -50,8 +51,8 @@ const Suggest = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-100">
-
+        <div className="min-h-screen flex items-center justify-center bg-[#f76d4ef7]">
+            <Navbar></Navbar>
             <div>
                 <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
                     <h1 className="text-2xl font-bold text-gray-800 mb-4 text-center">
