@@ -16,7 +16,7 @@ const handlerSend =(e)=>{
         <h1 className='text-xl font-bold'>Write your ingredients here.</h1>
         <form onSubmit={handlerSend}>
             <input type="text" placeholder='Enter incrident'
-            value={msg} className='h-[]'
+            value={msg} className='h-[300px] w-[80%] bg-gray-200'
             onChange={hanndlermsg}/>
             <button type='submit'>Send</button>
         </form>
