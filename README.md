@@ -54,7 +54,7 @@ Configure environment variables in a .env file:
 
 
 PORT=4000  
-GOOGLE_AI_API_KEY=AIzaSyAnzUXeZ09MCrT_KePCN3dfdV4SMkFZE_0
+GOOGLE_AI_API_KEY = your_api_key
 
 
 Start the backend server:
