@@ -3,15 +3,14 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
-        <div className='flex bg-green-400 max-w-full h-[50px] justify-evenly items-center text-xl'>
-            <div>
+        <div className='flex fixed top-0 left-0 w-full h-[70px] font-bold text-xl justify-evenly items-center bg-transparent text-white z-50'>
+            <div className='cursor-pointer'>
                 <Link to={'/'}>
-                <h1>Recipe<span>Generator</span></h1>
-                
-                </Link>                
-                </div>
-            <div >
-                <ul className='w-[400px] flex justify-evenly '>
+                    <h1>Recipe<span>Generator</span></h1>
+                </Link>
+            </div>
+            <div>
+                <ul className='w-[500px] flex justify-evenly'>
                     <li className='cursor-pointer hover:underline'>
                         <Link to={'/'}>Home</Link>
                     </li>
