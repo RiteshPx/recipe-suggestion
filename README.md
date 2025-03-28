@@ -46,7 +46,7 @@ cd recipe-suggestion
 ## Backend Setup
 
 sh
-cd backend  
+cd new-back  
 npm install
 
 
