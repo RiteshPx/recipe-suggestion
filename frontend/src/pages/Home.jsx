@@ -1,16 +1,28 @@
-import React from 'react'
-import { CTAButton } from '../components/cors/CTAbutton'
-import { aApi } from '../api/fetchApi'
+import React from "react";
 
-export const Home = () => {
+
+const Home = () => {
   return (
-    <div>
-        <h2>home</h2>
-        {/* <CTAButton active={true} linkto={"/signup"}>
-            Learn More  </CTAButton> */}
+    <div className="relative w-full h-screen">
+      {/* Background Image */}
+      <img
+        
+        alt="Background"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
 
-         <button onClick={aApi}></button>   
+      {/* Dark Overlay for Readability */}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
+      {/* Centered Upload Button */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+        <h1 className="text-3xl font-bold mb-4"></h1>
+        <button className="bg-green-500 hover:bg-green-700 text-white px-6 py-2 rounded-lg shadow-md">
+          Suggest
+        </button>
+      </div>
     </div>
-  )
-}
+  );
+};
+
+export default Home;
