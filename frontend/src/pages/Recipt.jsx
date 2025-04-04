@@ -13,22 +13,19 @@ function Recipt() {
   const [Data, setData] = React.useState(data);
 
 
-  return (
-    <div className='bg-orange-400'>
-      <div className="flex flex-wrap ml-11 mr-11 gap-6 justify-center p-6 w-[90%] mx-auto">
-        {Data.map((recipe, index) => (
-          <RecipetCard key={index} recipe={recipe} />
-        ))}
-
-      </div>
-      <div className='flex justify-center items-center pb-4 '>
-        <CTAButton active={true} linkto={"/suggest"}> 
-          BACK
-        </CTAButton>
-
-      </div>
-
+return (
+    <div className='bg-gradient-to-r from-blue-500 via-purple-300 to-pink-500'>
+        <div className="flex flex-wrap ml-11 mr-11 gap-6 justify-center p-6 w-[90%] mx-auto">
+            {Data.map((recipe, index) => (
+                <RecipetCard key={index} recipe={recipe} />
+            ))}
+        </div>
+        <div className='flex justify-center items-center pb-4 '>
+            <CTAButton active={true} linkto={"/suggest"}> 
+                - BACK
+            </CTAButton>
+        </div>
     </div>
-  )
+)
 }
 export default Recipt

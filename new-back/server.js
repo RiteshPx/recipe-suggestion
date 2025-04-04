@@ -1,7 +1,7 @@
-require("dotenv").config();
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -13,7 +13,6 @@ app.use(cors({
     origin: process.env.CLIENT_URL,
     credentials: true,
   }));
-
 
 const GOOGLE_AI_API_KEY = process.env.GOOGLE_AI_API_KEY;
 const GOOGLE_AI_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent";
@@ -42,8 +41,8 @@ async function askAI(message) {
 }
 
 // Route to handle AI requests
-
-
+var  imageRouter  = require("./routers/imageRouter");
+app.use("/images", imageRouter);
 
 app.get("/", (req, res) => {
     res.send("Hello World!");
@@ -60,7 +59,6 @@ app.post("/ask-ai", async (req, res) => {
     const aiResponse = await askAI(userMessage);
     res.json({ result: aiResponse });
 });
-
 
 // Start Server
 app.listen(PORT, () => {
